@@ -3,133 +3,147 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Minimal portfolio website - showcase your work and projects">
-  <title>Portfolio</title>
+  <meta name="description" content="Muesli of Mussels - Pure Pressure">
+  <title>Muesli of Mussels</title>
   <link rel="icon" type="image/png" href="favicon.png"/>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <!-- Navigation -->
-  <nav class="navbar">
-    <div class="nav-container">
-      <div class="nav-brand">Portfolio</div>
-      <div class="nav-menu">
-        <a href="#home" class="nav-link active">Home</a>
-        <a href="#portfolio" class="nav-link">Portfolio</a>
-        <a href="#about" class="nav-link">About</a>
-        <a href="#contact" class="nav-link">Contact</a>
-        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
-          <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <circle cx="12" cy="12" r="5"></circle>
-            <line x1="12" y1="1" x2="12" y2="3"></line>
-            <line x1="12" y1="21" x2="12" y2="23"></line>
-            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-            <line x1="1" y1="12" x2="3" y2="12"></line>
-            <line x1="21" y1="12" x2="23" y2="12"></line>
-            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-          </svg>
-          <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-          </svg>
-        </button>
-      </div>
+  <!-- Theme Toggle (Fixed Position) -->
+  <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+    <svg class="sun-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <circle cx="12" cy="12" r="5"></circle>
+      <line x1="12" y1="1" x2="12" y2="3"></line>
+      <line x1="12" y1="21" x2="12" y2="23"></line>
+      <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+      <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+      <line x1="1" y1="12" x2="3" y2="12"></line>
+      <line x1="21" y1="12" x2="23" y2="12"></line>
+      <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+      <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+    </svg>
+    <svg class="moon-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+    </svg>
+  </button>
+
+  <!-- Header -->
+  <header id="home" class="header">
+
+    <div class="header-content">
+      <h1>MUESLI OF MUSSELS</h1>
+      <p class="artist-name">PURE PRESSURE</p>
+      <nav class="header-nav">
+        <a href="#about">about</a> • 
+        <a href="#releases">releases</a> • 
+        <a href="#links">links</a> • 
+        <a href="#contact">contact</a>
+      </nav>
     </div>
-  </nav>
-
-  <!-- Hero Section -->
-  <section id="home" class="hero">
-    <div class="hero-content">
-      <h1 class="hero-title">Hello, I'm <span class="highlight">Developer</span></h1>
-      <p class="hero-subtitle">Creating beautiful digital experiences</p>
-      <a href="#portfolio" class="cta-button">View My Work</a>
-    </div>
-  </section>
-
-  <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio">
-    <div class="container">
-      <h2 class="section-title">Portfolio</h2>
-      <div class="portfolio-grid">
-        <div class="portfolio-item">
-          <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
-          <h3 class="portfolio-title">Project One</h3>
-          <p class="portfolio-description">Description of your first project</p>
-          <div class="portfolio-tags">
-            <span class="tag">Flutter</span>
-            <span class="tag">Dart</span>
-          </div>
-        </div>
-
-        <div class="portfolio-item">
-          <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
-          <h3 class="portfolio-title">Project Two</h3>
-          <p class="portfolio-description">Description of your second project</p>
-          <div class="portfolio-tags">
-            <span class="tag">Web</span>
-            <span class="tag">React</span>
-          </div>
-        </div>
-
-        <div class="portfolio-item">
-          <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
-          <h3 class="portfolio-title">Project Three</h3>
-          <p class="portfolio-description">Description of your third project</p>
-          <div class="portfolio-tags">
-            <span class="tag">Mobile</span>
-            <span class="tag">iOS</span>
-          </div>
-        </div>
-
-        <div class="portfolio-item">
-          <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
-          <h3 class="portfolio-title">Project Four</h3>
-          <p class="portfolio-description">Description of your fourth project</p>
-          <div class="portfolio-tags">
-            <span class="tag">Design</span>
-            <span class="tag">UI/UX</span>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+  </header>
 
   <!-- About Section -->
-  <section id="about" class="about">
+  <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title">About Me</h2>
-      <div class="about-content">
-        <div class="about-text">
-          <p>I'm a passionate developer and designer focused on creating elegant solutions to complex problems. With experience in full-stack development, I bring ideas to life through code and creativity.</p>
-          <p>I specialize in building responsive, user-friendly applications using modern technologies and best practices.</p>
-          <div class="skills">
-            <h3>Skills</h3>
-            <div class="skill-tags">
-              <span class="skill-tag">Flutter</span>
-              <span class="skill-tag">Dart</span>
-              <span class="skill-tag">JavaScript</span>
-              <span class="skill-tag">React</span>
-              <span class="skill-tag">Web Design</span>
-              <span class="skill-tag">UI/UX</span>
-            </div>
+      <h2>ABOUT</h2>
+      <div class="content-box">
+        <p>Pure Pressure is the visionary behind Muesli of Mussels, an experimental music and art collective pushing boundaries in sound design and digital creativity.</p>
+        <p>Drawing inspiration from minimalist aesthetics and complex audio landscapes, Pure Pressure crafts immersive sonic experiences that challenge conventional listening practices.</p>
+        <p>Based in the intersection of technology and art, Muesli of Mussels explores the boundaries between music, sound design, and experimental audio.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Releases Section -->
+  <section id="releases" class="section">
+    <div class="container">
+      <h2>RELEASES</h2>
+      
+      <div class="releases-category">
+        <h3>VINYL / CASSETTE</h3>
+        <div class="releases-list">
+          <div class="release-entry">
+            <span class="release-title">Experimental Soundscapes Vol. 1</span>
+            <span class="release-meta">MM001 • 2024</span>
           </div>
+          <div class="release-entry">
+            <span class="release-title">Pressure Sessions</span>
+            <span class="release-meta">MM002 • 2023</span>
+          </div>
+          <div class="release-entry">
+            <span class="release-title">Digital Pressure</span>
+            <span class="release-meta">MM003 • 2023</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="releases-category">
+        <h3>DIGITAL</h3>
+        <div class="releases-list">
+          <div class="release-entry">
+            <span class="release-title">Pure Echoes</span>
+            <span class="release-meta">Digital • 2022</span>
+          </div>
+          <div class="release-entry">
+            <span class="release-title">Sonic Landscapes</span>
+            <span class="release-meta">Digital • 2022</span>
+          </div>
+          <div class="release-entry">
+            <span class="release-title">Minimalist Ventures</span>
+            <span class="release-meta">Digital • 2021</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Links Section -->
+  <section id="links" class="section">
+    <div class="container">
+      <h2>LINKS</h2>
+      <div class="links-grid">
+        <div class="links-column">
+          <h3>Streaming</h3>
+          <ul>
+            <li><a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer">Soundcloud Channel</a></li>
+            <li><a href="https://bandcamp.com" target="_blank" rel="noopener noreferrer">Bandcamp Page</a></li>
+            <li><a href="https://spotify.com" target="_blank" rel="noopener noreferrer">Spotify & Apple Music</a></li>
+            <li><a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube Channel</a></li>
+          </ul>
+        </div>
+        <div class="links-column">
+          <h3>Social</h3>
+          <ul>
+            <li><a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram Page</a></li>
+            <li><a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook Page</a></li>
+            <li><a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter / X</a></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
 
   <!-- Contact Section -->
-  <section id="contact" class="contact">
+  <section id="contact" class="section">
     <div class="container">
-      <h2 class="section-title">Get In Touch</h2>
-      <p class="contact-subtitle">Let's build something amazing together</p>
-      <div class="contact-links">
-        <a href="mailto:your.email@example.com" class="contact-button">Email Me</a>
-        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-button">GitHub</a>
-        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-button">LinkedIn</a>
-        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="contact-button">Twitter</a>
+      <h2>CONTACT</h2>
+      <div class="content-box">
+        <form class="contact-form">
+          <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" id="name" placeholder="Your name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="your@email.com" required>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="Your message" rows="6" required></textarea>
+          </div>
+          <button type="submit" class="submit-button">Send</button>
+        </form>
       </div>
     </div>
   </section>
@@ -137,7 +151,7 @@
   <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>&copy; 2025 Your Name. All rights reserved.</p>
+      <p>&copy; 2025 Muesli of Mussels • Pure Pressure</p>
     </div>
   </footer>
 
