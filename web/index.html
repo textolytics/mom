@@ -1,38 +1,130 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <!--
-    If you are serving your web app in a path other than the root, change the
-    href value below to reflect the base path you are serving from.
-
-    The path provided below has to start and end with a slash "/" in order for
-    it to work correctly.
-
-    For more details:
-    * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/base
-
-    This is a placeholder for base href that will be replaced by the value of
-    the `--base-href` argument provided to `flutter build`.
-  -->
-  <base href="$FLUTTER_BASE_HREF">
-
   <meta charset="UTF-8">
-  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
-  <meta name="description" content="A new Flutter project.">
-
-  <!-- iOS meta tags & icons -->
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black">
-  <meta name="apple-mobile-web-app-title" content="mom">
-  <link rel="apple-touch-icon" href="icons/Icon-192.png">
-
-  <!-- Favicon -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Minimal portfolio website - showcase your work and projects">
+  <title>Portfolio</title>
   <link rel="icon" type="image/png" href="favicon.png"/>
-
-  <title>mom</title>
   <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <script src="flutter_bootstrap.js" async></script>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <div class="nav-brand">Portfolio</div>
+      <div class="nav-menu">
+        <a href="#home" class="nav-link active">Home</a>
+        <a href="#portfolio" class="nav-link">Portfolio</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <h1 class="hero-title">Hello, I'm <span class="highlight">Developer</span></h1>
+      <p class="hero-subtitle">Creating beautiful digital experiences</p>
+      <a href="#portfolio" class="cta-button">View My Work</a>
+    </div>
+  </section>
+
+  <!-- Portfolio Section -->
+  <section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2 class="section-title">Portfolio</h2>
+      <div class="portfolio-grid">
+        <div class="portfolio-item">
+          <div class="portfolio-image" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);"></div>
+          <h3 class="portfolio-title">Project One</h3>
+          <p class="portfolio-description">Description of your first project</p>
+          <div class="portfolio-tags">
+            <span class="tag">Flutter</span>
+            <span class="tag">Dart</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);"></div>
+          <h3 class="portfolio-title">Project Two</h3>
+          <p class="portfolio-description">Description of your second project</p>
+          <div class="portfolio-tags">
+            <span class="tag">Web</span>
+            <span class="tag">React</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);"></div>
+          <h3 class="portfolio-title">Project Three</h3>
+          <p class="portfolio-description">Description of your third project</p>
+          <div class="portfolio-tags">
+            <span class="tag">Mobile</span>
+            <span class="tag">iOS</span>
+          </div>
+        </div>
+
+        <div class="portfolio-item">
+          <div class="portfolio-image" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);"></div>
+          <h3 class="portfolio-title">Project Four</h3>
+          <p class="portfolio-description">Description of your fourth project</p>
+          <div class="portfolio-tags">
+            <span class="tag">Design</span>
+            <span class="tag">UI/UX</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-text">
+          <p>I'm a passionate developer and designer focused on creating elegant solutions to complex problems. With experience in full-stack development, I bring ideas to life through code and creativity.</p>
+          <p>I specialize in building responsive, user-friendly applications using modern technologies and best practices.</p>
+          <div class="skills">
+            <h3>Skills</h3>
+            <div class="skill-tags">
+              <span class="skill-tag">Flutter</span>
+              <span class="skill-tag">Dart</span>
+              <span class="skill-tag">JavaScript</span>
+              <span class="skill-tag">React</span>
+              <span class="skill-tag">Web Design</span>
+              <span class="skill-tag">UI/UX</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Get In Touch</h2>
+      <p class="contact-subtitle">Let's build something amazing together</p>
+      <div class="contact-links">
+        <a href="mailto:your.email@example.com" class="contact-button">Email Me</a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="contact-button">GitHub</a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="contact-button">LinkedIn</a>
+        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="contact-button">Twitter</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Your Name. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
