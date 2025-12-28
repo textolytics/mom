@@ -11,6 +11,16 @@
   --transition: all 0.3s ease;
 }
 
+/* Dark Theme Variables */
+[data-theme="dark"] {
+  --text-dark: #f0f0f0;
+  --text-light: #b0b0b0;
+  --bg-light: #1a1a1a;
+  --bg-white: #252525;
+  --border-color: #404040;
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
 /* Reset & Base Styles */
 * {
   margin: 0;
@@ -111,6 +121,51 @@ a:hover {
 .nav-link:hover::after,
 .nav-link.active::after {
   width: 100%;
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--text-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: var(--transition);
+  position: relative;
+}
+
+.theme-toggle:hover {
+  background: var(--bg-light);
+}
+
+.theme-toggle svg {
+  position: absolute;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.sun-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
+}
+
+.moon-icon {
+  opacity: 0;
+  transform: rotate(-180deg) scale(0);
+}
+
+[data-theme="dark"] .sun-icon {
+  opacity: 0;
+  transform: rotate(180deg) scale(0);
+}
+
+[data-theme="dark"] .moon-icon {
+  opacity: 1;
+  transform: rotate(0deg) scale(1);
 }
 
 /* Hero Section */

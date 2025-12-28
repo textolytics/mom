@@ -1,5 +1,27 @@
+// Dark Theme Toggle
+function initThemeToggle() {
+  const themeToggle = document.getElementById('themeToggle');
+  const htmlElement = document.documentElement;
+  
+  // Check for saved theme preference or default to 'light'
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  htmlElement.setAttribute('data-theme', currentTheme);
+  
+  // Theme toggle click handler
+  themeToggle.addEventListener('click', function() {
+    const theme = htmlElement.getAttribute('data-theme');
+    const newTheme = theme === 'light' ? 'dark' : 'light';
+    
+    htmlElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  });
+}
+
 // Smooth scroll navigation highlighting
 document.addEventListener('DOMContentLoaded', function() {
+  // Initialize theme toggle
+  initThemeToggle();
+
   const navLinks = document.querySelectorAll('.nav-link');
   const sections = document.querySelectorAll('section[id]');
 
