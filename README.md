@@ -45,7 +45,7 @@ npm --version      # 8+
 
 ```bash
 # 1. Clone/navigate to project
-cd /Users/vasilimitioglo/src/mom
+cd /Users/textolytics/src/mom
 
 # 2. Run setup script (automatic)
 chmod +x setup.sh
