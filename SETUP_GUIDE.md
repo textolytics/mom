@@ -51,7 +51,6 @@ A multi-platform music player application with web support, local server storage
 ### 1. Install Flutter Dependencies
 
 ```bash
-cd /Users/vasilimitioglo/src/mom
 flutter pub get
 ```
 
@@ -78,7 +77,7 @@ Server will be available at: `http://localhost:3000`
 In a new terminal:
 
 ```bash
-cd /Users/vasilimitioglo/src/mom
+cd ..
 
 # For Android
 flutter run
