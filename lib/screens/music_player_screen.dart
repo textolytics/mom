@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+// ignore: unused_import
 import 'package:file_picker/file_picker.dart';
 import '../providers/music_provider.dart';
 import '../widgets/music_player_header.dart';
@@ -21,6 +22,7 @@ class _MusicPlayerScreenState extends State<MusicPlayerScreen> {
     super.initState();
     // Initial load of songs
     Future.microtask(() {
+      // ignore: use_build_context_synchronously
       context.read<MusicProvider>().refreshSongs();
     });
   }
